@@ -28,7 +28,7 @@ runs:
       if: ${{ !contains(runner.name, 'nsc') && inputs.save != 'false' }}
       uses: 'actions/cache@v3'
       env:
-        ZSTD_CLEVEL: 1
+        ZSTD_CLEVEL: 3
       with:
         path: ${{ inputs.path }}
         key: ${{ inputs.key }}
