@@ -27,6 +27,8 @@ runs:
     - name: setup github cache
       if: ${{ !contains(runner.name, 'nsc') && inputs.save != 'false' }}
       uses: 'actions/cache@v3'
+      env:
+        ZSTD_CLEVEL: 1
       with:
         path: ${{ inputs.path }}
         key: ${{ inputs.key }}
